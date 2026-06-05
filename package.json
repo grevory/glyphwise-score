@@ -1,0 +1,37 @@
+{
+  "name": "glyphwise-score",
+  "version": "0.1.0",
+  "description": "Heuristic accessibility + legibility scoring for fonts. Standards-based contrast, heuristic glyph metrics.",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./browser": {
+      "types": "./dist/browser/index.d.ts",
+      "import": "./dist/browser/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "peerDependencies": {
+    "opentype.js": "^1.3.4"
+  },
+  "dependencies": {
+    "apca-w3": "^0.1.9"
+  },
+  "devDependencies": {
+    "@types/opentype.js": "^1.3.8",
+    "opentype.js": "^1.3.4",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}
