@@ -18,8 +18,8 @@ export function xHeightRatio(
   font: OpenTypeFont,
 ): { xHeight: number; capHeight: number; ratio: number } | null {
   const os2 = font.tables?.os2;
-  let xh = os2?.sxHeight && os2.sxHeight > 0 ? os2.sxHeight : glyphTop(font, 'x');
-  let cap = os2?.sCapHeight && os2.sCapHeight > 0 ? os2.sCapHeight : glyphTop(font, 'H');
+  const xh = os2?.sxHeight && os2.sxHeight > 0 ? os2.sxHeight : glyphTop(font, 'x');
+  const cap = os2?.sCapHeight && os2.sCapHeight > 0 ? os2.sCapHeight : glyphTop(font, 'H');
   if (!xh || !cap) return null;
   return { xHeight: xh, capHeight: cap, ratio: xh / cap };
 }

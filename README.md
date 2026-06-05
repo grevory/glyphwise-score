@@ -131,22 +131,22 @@ It is not included in `scoreFont` until implemented.
 The overall score is a weighted average of metrics with a numeric score. Metrics
 with `status: 'na'` are excluded instead of being penalized.
 
-| Metric | Weight | Basis |
-| --- | ---: | --- |
-| Color contrast | 1.5 | WCAG 2.x ratio plus APCA note |
-| Character disambiguation | 1.5 | Rasterized glyph difference |
-| x-height ratio | 1.0 | x-height relative to cap height |
-| Numeral scanning | 1.0 | OpenType features and digit advance widths |
+| Metric                   | Weight | Basis                                      |
+| ------------------------ | -----: | ------------------------------------------ |
+| Color contrast           |    1.5 | WCAG 2.x ratio plus APCA note              |
+| Character disambiguation |    1.5 | Rasterized glyph difference                |
+| x-height ratio           |    1.0 | x-height relative to cap height            |
+| Numeral scanning         |    1.0 | OpenType features and digit advance widths |
 
 Grade bands:
 
 | Grade | Overall |
-| --- | ---: |
-| A | 85-100 |
-| B | 70-84 |
-| C | 55-69 |
-| D | 40-54 |
-| F | 0-39 |
+| ----- | ------: |
+| A     |  85-100 |
+| B     |   70-84 |
+| C     |   55-69 |
+| D     |   40-54 |
+| F     |    0-39 |
 
 ## Metric Results
 

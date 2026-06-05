@@ -63,7 +63,8 @@ export function scoreDisambiguation(
       for (let j = i + 1; j < group.length; j++) {
         const a = raster(group[i]);
         const b = raster(group[j]);
-        if (a && b) pairDiffs.push({ pair: `${group[i]}/${group[j]}`, diff: glyphDifference(a, b) });
+        if (a && b)
+          pairDiffs.push({ pair: `${group[i]}/${group[j]}`, diff: glyphDifference(a, b) });
       }
     }
   }

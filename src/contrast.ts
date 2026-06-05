@@ -7,7 +7,11 @@ import { METRIC_WEIGHTS } from './metrics/common.js';
 
 export function parseHex(hex: string): RGB {
   let h = hex.trim().replace(/^#/, '');
-  if (h.length === 3) h = h.split('').map((c) => c + c).join('');
+  if (h.length === 3)
+    h = h
+      .split('')
+      .map((c) => c + c)
+      .join('');
   if (h.length === 8) h = h.slice(0, 6); // ignore alpha
   if (h.length !== 6 || /[^0-9a-f]/i.test(h)) {
     throw new Error(`Invalid hex color: ${hex}`);
@@ -64,7 +68,10 @@ export function apcaLc(fgHex: string, bgHex: string): number | null {
   try {
     const fg = parseHex(fgHex);
     const bg = parseHex(bgHex);
-    const lc = apca.APCAcontrast(apca.sRGBtoY([fg.r, fg.g, fg.b]), apca.sRGBtoY([bg.r, bg.g, bg.b]));
+    const lc = apca.APCAcontrast(
+      apca.sRGBtoY([fg.r, fg.g, fg.b]),
+      apca.sRGBtoY([bg.r, bg.g, bg.b]),
+    );
     return Math.abs(Number(lc));
   } catch {
     return null;

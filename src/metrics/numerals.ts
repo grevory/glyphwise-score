@@ -72,8 +72,8 @@ export function numeralsMetric(font: OpenTypeFont): MetricResult {
   const tabular = info.tabularByDefault
     ? 'tabular by default'
     : info.hasTnum
-    ? 'tabular available via "tnum"'
-    : 'proportional (digits will not align in columns)';
+      ? 'tabular available via "tnum"'
+      : 'proportional (digits will not align in columns)';
 
   return {
     id: 'numerals',

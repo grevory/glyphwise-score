@@ -21,7 +21,12 @@ describe('glyphDifference', () => {
     expect(glyphDifference(a, b)).toBeCloseTo(1, 5);
   });
   it('throws on size mismatch', () => {
-    expect(() => glyphDifference(bmp(4, () => 0), bmp(2, () => 0))).toThrow();
+    expect(() =>
+      glyphDifference(
+        bmp(4, () => 0),
+        bmp(2, () => 0),
+      ),
+    ).toThrow();
   });
 });
 

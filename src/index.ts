@@ -31,5 +31,9 @@ export {
   numeralsInfo,
   numeralsMetric,
 } from './metrics/numerals.js';
-export { CONFUSABLE_GROUPS, glyphDifference, scoreDisambiguation } from './metrics/disambiguation.js';
+export {
+  CONFUSABLE_GROUPS,
+  glyphDifference,
+  scoreDisambiguation,
+} from './metrics/disambiguation.js';
 export { strokeContrastMetric } from './metrics/strokeContrast.js';

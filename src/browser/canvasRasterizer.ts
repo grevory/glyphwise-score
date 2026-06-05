@@ -21,7 +21,11 @@ function makeCanvas(size: number): { canvas: RasterCanvas; ctx: RasterContext } 
   return ctx ? { canvas, ctx } : null;
 }
 
-export const canvasRasterizer: GlyphRasterizer = (font: OpenTypeFont, char: string, size = 64): Bitmap | null => {
+export const canvasRasterizer: GlyphRasterizer = (
+  font: OpenTypeFont,
+  char: string,
+  size = 64,
+): Bitmap | null => {
   const glyph = font.charToGlyph(char);
   if (!glyph || glyph.unicode == null) return null;
 
