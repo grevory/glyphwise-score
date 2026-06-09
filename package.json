@@ -1,54 +1,55 @@
 {
-  "name": "glyphwise-score",
-  "version": "0.1.0",
-  "description": "Heuristic accessibility + legibility scoring for fonts. Standards-based contrast, heuristic glyph metrics.",
-  "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    },
-    "./browser": {
-      "types": "./dist/browser/index.d.ts",
-      "import": "./dist/browser/index.js"
-    }
-  },
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "lint": "eslint \"src/**/*.ts\" \"*.test.ts\" \"vitest.config.ts\"",
-    "lint:fix": "pnpm run lint -- --fix",
-    "format": "prettier --write README.md package.json tsconfig.json vitest.config.ts \"src/**/*.ts\" \"*.test.ts\"",
-    "format:check": "prettier --check README.md package.json tsconfig.json vitest.config.ts \"src/**/*.ts\" \"*.test.ts\"",
-    "check": "pnpm run typecheck && pnpm run lint && pnpm run format:check && pnpm test",
-    "test": "vitest run",
-    "test:watch": "vitest"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "all",
-    "printWidth": 100
-  },
-  "peerDependencies": {
-    "opentype.js": "^2.0.0"
-  },
-  "dependencies": {
-    "apca-w3": "^0.1.9"
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/opentype.js": "^1.3.10",
-    "eslint": "^10.3.0",
-    "opentype.js": "^2.0.0",
-    "prettier": "^3.8.3",
-    "typescript": "^5.4.0",
-    "typescript-eslint": "^8.59.2",
-    "vitest": "^1.6.0"
-  }
+	"name": "glyphwise-score",
+	"version": "0.1.0",
+	"description": "Heuristic accessibility + legibility scoring for fonts. Standards-based contrast, heuristic glyph metrics.",
+	"type": "module",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		},
+		"./browser": {
+			"types": "./dist/browser/index.d.ts",
+			"import": "./dist/browser/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"typecheck": "tsc -p tsconfig.json --noEmit",
+		"lint": "eslint \"src/**/*.ts\" \"*.test.ts\" \"vitest.config.ts\"",
+		"lint:fix": "pnpm run lint -- --fix",
+		"format": "prettier --write README.md package.json tsconfig.json vitest.config.ts \"src/**/*.ts\" \"*.test.ts\"",
+		"format:check": "prettier --check README.md package.json tsconfig.json vitest.config.ts \"src/**/*.ts\" \"*.test.ts\"",
+		"check": "pnpm run typecheck && pnpm run lint && pnpm run format:check && pnpm test",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"prepare": "tsc -p tsconfig.json"
+	},
+	"prettier": {
+		"singleQuote": true,
+		"trailingComma": "all",
+		"printWidth": 100
+	},
+	"peerDependencies": {
+		"opentype.js": "^2.0.0"
+	},
+	"dependencies": {
+		"apca-w3": "^0.1.9"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@types/opentype.js": "^1.3.10",
+		"eslint": "^10.3.0",
+		"opentype.js": "^2.0.0",
+		"prettier": "^3.8.3",
+		"typescript": "^5.4.0",
+		"typescript-eslint": "^8.59.2",
+		"vitest": "^1.6.0"
+	}
 }
