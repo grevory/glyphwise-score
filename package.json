@@ -1,5 +1,5 @@
 {
-	"name": "glyphwise-score",
+	"name": "glyphcheck-score",
 	"version": "0.1.0",
 	"description": "Heuristic accessibility + legibility scoring for fonts. Standards-based contrast, heuristic glyph metrics.",
 	"type": "module",

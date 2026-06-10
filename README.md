@@ -1,6 +1,6 @@
-# glyphwise-score
+# glyphcheck-score
 
-Heuristic accessibility and legibility scoring for fonts. `glyphwise-score` is a
+Heuristic accessibility and legibility scoring for fonts. `glyphcheck-score` is a
 framework-free TypeScript package that combines standards-based color contrast
 checks with font-shape heuristics such as x-height, numeral behavior, and
 character disambiguation.
@@ -18,7 +18,7 @@ testing for high-stakes work.
 ## Install
 
 ```bash
-npm install glyphwise-score opentype.js
+npm install glyphcheck-score opentype.js
 ```
 
 `opentype.js` is a peer dependency. The package also uses `apca-w3` for a
@@ -28,8 +28,8 @@ secondary, non-official APCA lightness contrast signal.
 
 ```ts
 import opentype from 'opentype.js';
-import { scoreFont } from 'glyphwise-score';
-import { canvasRasterizer } from 'glyphwise-score/browser';
+import { scoreFont } from 'glyphcheck-score';
+import { canvasRasterizer } from 'glyphcheck-score/browser';
 
 const response = await fetch('/fonts/Inter-Regular.woff');
 const font = opentype.parse(await response.arrayBuffer());
@@ -49,10 +49,10 @@ console.log(result.metrics); // MetricResult[]
 ## Browser Helpers
 
 The root package is pure scoring logic. Browser-only helpers are exported from
-`glyphwise-score/browser`.
+`glyphcheck-score/browser`.
 
 ```ts
-import { checkTabularFigures } from 'glyphwise-score/browser';
+import { checkTabularFigures } from 'glyphcheck-score/browser';
 
 await document.fonts.ready;
 

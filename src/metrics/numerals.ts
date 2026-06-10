@@ -4,7 +4,7 @@
 //
 // NOTE: GSUB tells us a feature EXISTS; it does not guarantee the browser
 // applies it. For rendered behavior, also run `checkTabularFigures` from
-// `glyphwise-score/browser` against the live @font-face.
+// `glyphcheck-score/browser` against the live @font-face.
 
 import type { OpenTypeFont, MetricResult } from '../types.js';
 import { METRIC_WEIGHTS, scoreToStatus } from './common.js';

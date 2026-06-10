@@ -1,4 +1,4 @@
-// glyphwise-score — heuristic accessibility/legibility scoring for fonts.
+// glyphcheck-score — heuristic accessibility/legibility scoring for fonts.
 
 export type {
   MetricStatus,

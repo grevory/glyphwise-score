@@ -49,7 +49,7 @@ export function scoreFont(font: OpenTypeFont, ctx: ScoreContext = {}): FontAcces
       : naMetric(
           'disambiguation',
           'Character disambiguation',
-          'Provide a rasterizer (canvasRasterizer from glyphwise-score/browser) to enable this metric.',
+          'Provide a rasterizer (canvasRasterizer from glyphcheck-score/browser) to enable this metric.',
           METRIC_WEIGHTS.disambiguation,
         ),
   );

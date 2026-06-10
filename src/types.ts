@@ -1,4 +1,4 @@
-// Public types for glyphwise-score.
+// Public types for glyphcheck-score.
 
 /** Quality status for a single metric, for UI badging. */
 export type MetricStatus = 'good' | 'fair' | 'poor' | 'na';
@@ -36,7 +36,7 @@ export interface ScoreContext {
   background?: string;
   /**
    * Optional glyph rasterizer. Providing it enables the character-disambiguation
-   * metric. Use `canvasRasterizer` from `glyphwise-score/browser` in the browser.
+   * metric. Use `canvasRasterizer` from `glyphcheck-score/browser` in the browser.
    */
   rasterize?: GlyphRasterizer;
 }
